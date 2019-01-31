@@ -52,7 +52,8 @@ class App extends Component {
                     onChange={this.onChange} 
                     onSubmit={this.onSubmit} 
                     startYear={this.state.startYear} 
-                    endYear={this.state.endYear}/>
+                    endYear={this.state.endYear}
+                />
             </div>
 
             {this.state.articles.length > 0 && 
@@ -60,7 +61,7 @@ class App extends Component {
                 <h2 id="resultWord">Results</h2>
                 <Results 
                     articles={this.state.articles} 
-                    />
+                />
             </div>}
 
         </div>

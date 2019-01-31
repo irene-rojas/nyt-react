@@ -41,10 +41,6 @@
     opacity: 0.95;
   }
   
-  #searchWord {
-    border-bottom: 1px solid lightgray;
-  }
-  
   .resultsDiv {
     grid-row: 3/4;
     grid-column: 3/span 4;
@@ -55,16 +51,4 @@
   
   #resultsWord {
     border-bottom: 1px solid lightgray;
-  }
-  
-  .savedDiv {
-    grid-row: 4/5;
-    grid-column: 2/span 4;
-    border: 1px solid black;
-    text-align: center;
-    border-radius: 5px;
-  }
-  
-  #savedWord {
-    border-bottom: 1px solid black;
   }
