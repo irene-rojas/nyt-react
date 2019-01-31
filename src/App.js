@@ -14,7 +14,7 @@ class App extends Component {
         // empty array for results
     };
 
-    // text fields
+    // multiple text fields
     onChange = event => {
         const {name, value} = event.target;
         this.setState({
@@ -24,6 +24,7 @@ class App extends Component {
 
     onSubmit = (event) => {
         event.preventDefault();
+        // hide API key!!
         axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${this.state.query}&api-key=yR0pJI0b6TCoKd5S1YkdbUztUxdzsSfh&facet_fields=source&facet=true&begin_date=${this.state.startYear}0101&end_date=${this.state.endYear}1231`)
         .then(res => {
             this.setState({
