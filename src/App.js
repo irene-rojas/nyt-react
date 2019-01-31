@@ -47,13 +47,15 @@ class App extends Component {
 
             <div className="searchDiv">
                 <h2 id="searchWord">Search</h2>
-                <Search 
-                    query={this.state.query} 
-                    onChange={this.onChange} 
-                    onSubmit={this.onSubmit} 
-                    startYear={this.state.startYear} 
-                    endYear={this.state.endYear}
-                />
+                <div className="inputFields">
+                    <Search 
+                        query={this.state.query} 
+                        onChange={this.onChange} 
+                        onSubmit={this.onSubmit} 
+                        startYear={this.state.startYear} 
+                        endYear={this.state.endYear}
+                    />
+                </div>
             </div>
 
             {this.state.articles.length > 0 && 
