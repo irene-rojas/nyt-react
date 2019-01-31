@@ -27,7 +27,7 @@ class App extends Component {
         axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${this.state.query}&api-key=${process.env.REACT_APP_NYT_API_KEY}&facet_fields=source&facet=true&begin_date=${this.state.startYear}0101&end_date=${this.state.endYear}1231`)
         .then(res => {
             this.setState({
-                articles: res.data
+                articles: res.data.response.docs
             })
             console.log(this.state.articles);
         });
