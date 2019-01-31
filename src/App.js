@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from "axios";
+import Search from "./components/Search/Search";
+import Results from "./components/Results/Results";
 
 class App extends Component {
 
@@ -13,20 +15,23 @@ class App extends Component {
     };
 
     // text fields
-    onChange = (event) => {
-        event.preventDefault();
+    onChange = event => {
+        const {name, value} = event.target;
         this.setState({
-            query: event.target.value
+            [name]: value
         });
-    }
+        console.log(value);
+    };
 
     onSubmit = (event) => {
         event.preventDefault();
-        axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${this.state.query}&api-key=yR0pJI0b6TCoKd5S1YkdbUztUxdzsSfh`)
+        axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${this.state.query}&api-key=yR0pJI0b6TCoKd5S1YkdbUztUxdzsSfh&facet_fields=source&facet=true&begin_date=${this.state.startYear}0101&end_date=${this.state.endYear}1231`)
         .then(res => {
-            console.log(res.data.res.docs);
-            res.json(res.data.res.docs);
-        })
+            this.setState({
+                articles: res.data
+            })
+        });
+        console.log(this.state.articles);
     }
 
   render() {
@@ -41,25 +46,24 @@ class App extends Component {
                 <p>Search for articles from "The New York Times"</p>
             </div>
 
-            {/* <div className="searchDiv">
+            <div className="searchDiv">
                 <h2 id="searchWord">Search</h2>
                 <Search 
-                query={this.state.query} 
-                handleInputChange={this.handleInputChange} 
-                handleFormSubmit={this.handleFormSubmit} 
-                startYear={this.state.startYear} 
-                endYear={this.state.endYear}/>
-            </div> */}
+                    query={this.state.query} 
+                    onChange={this.onChange} 
+                    onSubmit={this.onSubmit} 
+                    startYear={this.state.startYear} 
+                    endYear={this.state.endYear}/>
+            </div>
 
-            {/* {this.state.articles.length > 0 && 
+            {this.state.articles.length > 0 && 
                 <div className="resultsDiv">
                 <h2 
                     id="resultWord">Results</h2>
                 <Results 
                     articles={this.state.articles} 
-                    handleArticleSave={this.handleArticleSave}/>
-            </div>} */}
-
+                    />
+            </div>}
 
         </div>
 
