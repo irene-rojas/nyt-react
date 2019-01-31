@@ -1,0 +1,22 @@
+body {
+    margin: 0 auto;
+    height: 100vh;
+    background-image: url("./images/news1.jpg");
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax {
+    height: 100vh;
+    background-image: url("./images/news1.jpg");
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* <a href='https://www.freepik.com/free-vector/news-interview_792535.htm'>Designed by Freepik</a> */
