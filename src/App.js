@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import axios from "axios";
 
 class App extends Component {
 
@@ -14,9 +14,19 @@ class App extends Component {
 
     // text fields
     onChange = (event) => {
+        event.preventDefault();
         this.setState({
             query: event.target.value
         });
+    }
+
+    onSubmit = (event) => {
+        event.preventDefault();
+        axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${this.state.query}&api-key=yR0pJI0b6TCoKd5S1YkdbUztUxdzsSfh`)
+        .then(res => {
+            console.log(res.data.res.docs);
+            res.json(res.data.res.docs);
+        })
     }
 
   render() {
