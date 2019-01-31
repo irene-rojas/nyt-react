@@ -21,6 +21,7 @@ const Results = (props) => (
               ) : (
                 <h2 className="text-center">No articles</h2>
               )}
+              
         </div>
 )
 

@@ -11,7 +11,7 @@ class App extends Component {
         startYear: "",
         endYear: "",
         articles: []
-        // empty array waiting for results
+        // empty array for results
     };
 
     // text fields
@@ -20,7 +20,6 @@ class App extends Component {
         this.setState({
             [name]: value
         });
-        console.log(value);
     };
 
     onSubmit = (event) => {
