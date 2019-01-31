@@ -1,1 +1,1 @@
-Search articles from 'The New York Times'
+Search articles from 'The New York Times' by topic and date range
