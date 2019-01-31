@@ -2,7 +2,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 100px repeat(3, auto);
+    grid-template-rows: 125px repeat(3, auto);
     grid-row-gap: 10px;
     font-family: "Avenir Next";
   }
@@ -27,7 +27,6 @@
     grid-column: 3/span 4;
     grid-row: 1/2;
     text-align: center;
-    /* border-bottom: 1px solid black; */
     background-color: white;
     /* opacity: 0.95; */
     border-bottom-left-radius: 5px;
