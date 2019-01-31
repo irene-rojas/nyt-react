@@ -1,4 +1,5 @@
 import React from "react";
+import "./ResultsModel.css";
 
 const ResultsModel = (props) => (
 
