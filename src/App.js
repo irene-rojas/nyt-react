@@ -24,7 +24,6 @@ class App extends Component {
 
     onSubmit = (event) => {
         event.preventDefault();
-        // hide API key!! myPrecious
         axios.get(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${this.state.query}&api-key=${process.env.REACT_APP_NYT_API_KEY}&facet_fields=source&facet=true&begin_date=${this.state.startYear}0101&end_date=${this.state.endYear}1231`)
         .then(res => {
             this.setState({
@@ -58,8 +57,7 @@ class App extends Component {
 
             {this.state.articles.length > 0 && 
                 <div className="resultsDiv">
-                <h2 
-                    id="resultWord">Results</h2>
+                <h2 id="resultWord">Results</h2>
                 <Results 
                     articles={this.state.articles} 
                     />

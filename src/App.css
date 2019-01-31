@@ -28,7 +28,6 @@
     grid-row: 1/2;
     text-align: center;
     background-color: white;
-    /* opacity: 0.95; */
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
   }
@@ -36,7 +35,6 @@
   .searchDiv {
     grid-row: 2/3;
     grid-column: 4/span 2;
-    /* border: 1px solid black; */
     text-align: center;
     border-radius: 5px;
     background-color: white;
@@ -50,7 +48,6 @@
   .resultsDiv {
     grid-row: 3/4;
     grid-column: 3/span 4;
-    /* border: 1px solid black; */
     text-align: center;
     border-radius: 5px;
     opacity: 0.95;
