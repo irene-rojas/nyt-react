@@ -40,12 +40,12 @@ class App extends Component {
             
         <div className="App">
 
-            <div className="header">
+            <header className="header">
                 <h1>'The New York Times' Article Search</h1>
                 <p>Search for articles from "The New York Times"</p>
-            </div>
+            </header>
 
-            <div className="searchDiv">
+            <section className="searchDiv">
                 <h2 id="searchWord">Search</h2>
                 <div className="inputFields">
                     <Search 
@@ -56,7 +56,7 @@ class App extends Component {
                         endYear={this.state.endYear}
                     />
                 </div>
-            </div>
+            </section>
 
             {this.state.articles.length > 0 && 
                 <div className="resultsDiv">
