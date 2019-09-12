@@ -4,7 +4,7 @@ import "./Results.css";
 
 const Results = (props) => (
 
-        <div className="masterDiv resultsDiv">
+        <section className="masterDiv resultsDiv">
 
             {props.articles.length ? (
                 <div>
@@ -22,7 +22,7 @@ const Results = (props) => (
                 <h2 className="text-center">No articles</h2>
               )}
               
-        </div>
+        </section>
 )
 
 export default Results;
